@@ -1,10 +1,9 @@
-
 RegisterServerEvent('supreme_oxitem:addItem')
 AddEventHandler('supreme_oxitem:addItem', function(name, label2, weight, stack, close, description)
 	local src = source
 	local path = GetResourcePath(GetCurrentResourceName())
 	path = path:gsub('//', '/')..'/createditems.lua'
-print(path)
+
 	file = io.open(path, 'a+')
 	if not itemname then label = "\n['"..name.."'] = {\n"
 	else
