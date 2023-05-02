@@ -3,33 +3,51 @@ RegisterCommand('oxadditem', function()
         {
             type = "input",
             label = "Item name (ex - water)",
-            icon = ""
+            icon = "",
+            required = true
          },
          {
             type = "input",
             label = "Item Label",
-            icon = ""
+            icon = "",
+            required = true
          },
          {
-            type = "input",
+            type = "slider",
             label = "Weight",
-            icon = ""
+            icon = "",
+            required = true
          },
          {
-            type = "input",
-            label = "Stack (true or false)",
-            icon = ""
+            type = "select",
+            label = "Stack",
+            icon = "",
+            required = true,
+            options = {
+               { value = 'true', label = 'True' },
+               { value = 'false', label = 'False' },
+           }
          },
          {
-            type = "input",
-            label = "Close (true or false)",
-            icon = ""
+            type = "select",
+            label = "Close",
+            icon = "",
+            required = true,
+            options = {
+               { value = 'true', label = 'True' },
+               { value = 'false', label = 'False' },
+           }
          },
          {
             type = "input",
             label = "Description",
-            icon = ""
+            icon = "",
+            required = true
          }
     })
+    if data == nil then
+      print('it was nil')
+    else
  TriggerServerEvent('supreme_oxitem:addItem', data[1], data[2], data[3], data[4], data[5], data[6])
+    end
 end)
