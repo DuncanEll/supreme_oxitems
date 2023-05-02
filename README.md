@@ -10,3 +10,8 @@ It is nothing fancy and might not be of use to anyone but thought i would share 
 
 Dependencies: 
 ox_lib
+
+
+add to server file
+
+add_ace identifier.license:################# oxitems allow
