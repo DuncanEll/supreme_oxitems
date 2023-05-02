@@ -1,4 +1,5 @@
-RegisterCommand('oxadditem', function()
+RegisterNetEvent('supreme_oxitems:openMenu')
+AddEventHandler('supreme_oxitems:openMenu', function()
     local data = lib.inputDialog("Enter Item Details", {
         {
             type = "input",
