@@ -14,3 +14,11 @@ server_scripts {
 shared_scripts {
     '@ox_lib/init.lua'
 }
+
+ui_page 'html/index.html'
+
+files {
+	'html/index.html',
+    'html/script.js',
+    'html/main.css'
+}

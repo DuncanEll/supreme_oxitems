@@ -1,3 +1,5 @@
+local imageActive = false
+
 RegisterNetEvent('supreme_oxitems:openMenu')
 AddEventHandler('supreme_oxitems:openMenu', function()
     local data = lib.inputDialog("Enter Item Details", {
@@ -58,4 +60,31 @@ AddEventHandler('supreme_oxitems:openMenu', function()
  TriggerServerEvent('supreme_oxitem:addItem', data[1], data[2], data[3], data[4], data[5], data[6])
  TriggerServerEvent('supreme_oxitem:addImage', data[1], data[7])
     end
+end)
+
+-- View image
+
+RegisterCommand('oximage', function()
+   local data = lib.inputDialog("Image URL", {
+      {
+          type = "input",
+          label = "Image URL to view (imgur)",
+          icon = "",
+          required = true
+       },
+      })
+TriggerEvent('supreme_oxitem:viewImage', data[1])
+end)
+
+RegisterNetEvent("supreme_oxitem:viewImage", function(url1)
+   if not imageActive then
+       imageActive = true
+       SetNuiFocus(true, true)
+       SendNUIMessage({action = "Show", photo = url1}) 
+   end
+end)
+
+RegisterNUICallback("Close", function()
+   SetNuiFocus(false, false)
+   imageActive = false
 end)

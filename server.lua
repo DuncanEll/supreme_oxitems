@@ -1,3 +1,4 @@
+
 RegisterServerEvent('supreme_oxitem:addItem')
 AddEventHandler('supreme_oxitem:addItem', function(name, label2, weight, stack, close, description)
 	if IsPlayerAceAllowed(source, "oxitems") then
