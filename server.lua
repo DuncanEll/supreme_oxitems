@@ -1,4 +1,3 @@
-
 RegisterServerEvent('supreme_oxitem:addItem')
 AddEventHandler('supreme_oxitem:addItem', function(name, label2, weight, stack, close, description)
 	if IsPlayerAceAllowed(source, "oxitems") then
@@ -19,6 +18,19 @@ AddEventHandler('supreme_oxitem:addItem', function(name, label2, weight, stack, 
 	file:write('},')
 	file:close()
 end
+end)
+
+RegisterServerEvent('supreme_oxitem:addImage')
+AddEventHandler('supreme_oxitem:addImage', function(name, url)
+	if IsPlayerAceAllowed(source, "oxitems") then
+	PerformHttpRequest(url, function (errorCode, imageData, resultHeaders)
+		local path = GetResourcePath("ox_inventory")
+		path = path:gsub('//', '/')..'/web/images/'..name..'.png'
+		local f = assert(io.open(path, 'wb')) 
+        f:write(imageData)
+        f:close()
+	  end)
+	end
 end)
 
 
