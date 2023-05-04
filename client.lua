@@ -59,4 +59,3 @@ AddEventHandler('supreme_oxitems:openMenu', function()
  TriggerServerEvent('supreme_oxitem:addImage', data[1], data[7])
     end
 end)
--- image url added
