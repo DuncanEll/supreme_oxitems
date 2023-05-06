@@ -50,9 +50,9 @@ AddEventHandler('supreme_oxitem:addImage', function(name, url)
 end)
 
 
-RegisterCommand('oxadditem', function(source)
+RegisterCommand('oxdevtools', function(source)
     if IsPlayerAceAllowed(source, "oxitems") then
-        TriggerClientEvent("supreme_oxitems:openMenu", source)
+        TriggerClientEvent("supreme_oxitems:openDevTools", source)
 	else
 		print('not allowed')
     end

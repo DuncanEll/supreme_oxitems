@@ -1,0 +1,65 @@
+body {
+    background: none !important;
+}
+
+#container {
+    display: none;
+    font-size: 20px;
+    padding: 25px;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(44, 44, 44);
+    border: 2px solid aliceblue;
+    border-radius: 7px;
+    box-shadow: rgba(0, 119, 255, 0.4) 0px 30px 90px;
+}
+
+button {
+    background-color:rgb(42, 108, 165);
+    padding: 12px;
+    font-family: Tahoma, sans-serif; /* Add the font-family property */
+}
+
+input {
+    margin-bottom: 5px;
+    width: 200px;
+    font-size: 15px;
+    padding: 12px;
+}
+
+        #navigation {
+    font-size: 20px;
+    padding: 25px;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: -88%; /* Move the navigation to the right */
+    transform: translateY(-50%);
+    background-color: rgb(44, 44, 44);
+    border: 2px solid aliceblue;
+    border-radius: 7px;
+    box-shadow: rgba(0, 119, 255, 0.4) 0px 30px 90px;
+    display: flex;
+    flex-direction: column; /* Arrange buttons vertically */
+    align-items: center; /* Center the buttons horizontally */
+    
+}
+
+.page {
+    display: none;
+    animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
