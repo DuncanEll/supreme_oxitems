@@ -13,6 +13,7 @@ You can use either OX_LIB or UI. You can set this in the config file
 Dependencies: 
 ox_lib
 
+https://discord.gg/kJ94NcUh7B
 
 add to server file
 
